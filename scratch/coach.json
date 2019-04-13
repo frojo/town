@@ -1,0 +1,26 @@
+{ "frames": {
+   "coach.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 7, "h": 17 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 85, "y": 38, "w": 7, "h": 17 },
+    "sourceSize": { "w": 256, "h": 256 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.9",
+  "image": "C:\\Users\\Francisco Rojo\\Desktop\\projects\\games\\town\\town\\sprite-wip\\coach.png",
+  "format": "RGBA8888",
+  "size": { "w": 256, "h": 256 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
