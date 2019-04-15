@@ -16,7 +16,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         while (Input.anyKeyDown == false) {
             yield return null;
         }
-        // yield return null;
+        yield return null;
 	}
 
 	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {
