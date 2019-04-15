@@ -1,25 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	// UI element that displays lines
+	public Text displayedText;
 
 	public override IEnumerator RunLine(Yarn.Line line) {
-		yield return null;
+		Debug.Log(line.text);
+		displayedText.text = line.text;
 
+		// Wait for any user input
+        while (Input.anyKeyDown == false) {
+            yield return null;
+        }
 	}
 
-	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {
+	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {	
 		yield return null;
 	}
 
