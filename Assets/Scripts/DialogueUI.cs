@@ -8,11 +8,47 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 	// UI element that displays lines
 	public Text displayedText;
 
+    // UI element that represents the character currently talking
+    public Image currentCharacter;
+
+    // pairs of (nameOfCharacter, characterPortraitSprite)
+    // public Dictionary<string, Sprite> portraitSprites;
+    public Sprite coachPortrait;
+    public Sprite playerPortrait;
+
 	public override IEnumerator RunLine(Yarn.Line line) {
 		Debug.Log(line.text);
 		displayedText.text = line.text;
 
-		// Wait for any user input
+        string[] nameDialogue = line.text.Split(':');
+        if (nameDialogue.Length != 2)
+        {
+            Debug.Log("Not properly formatted line (split)");
+        }
+
+        string name = nameDialogue[0];
+        if (name == "Player")
+        {
+            currentCharacter.sprite = playerPortrait;
+        }
+        else if (name == "Coach")
+        {
+            currentCharacter.sprite = coachPortrait;
+        }
+        else
+        {
+            Debug.Log("Not properly formatted line (character name)");
+        }
+
+        string dialogue = nameDialogue[1];
+        if (dialogue[0] != ' ')
+        {
+            Debug.Log("Not properly formatted line (space)");
+        }
+        displayedText.text = dialogue;
+        
+
+        // Wait for any user input
         while (Input.anyKeyDown == false) {
             yield return null;
         }
