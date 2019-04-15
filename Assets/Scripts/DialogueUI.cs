@@ -41,12 +41,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
 
         string dialogue = nameDialogue[1];
-        if (dialogue[0] != ' ')
-        {
-            Debug.Log("Not properly formatted line (space)");
-        }
-        displayedText.text = dialogue;
-        
+        displayedText.text = dialogue.TrimStart(' ');
+      
 
         // Wait for any user input
         while (Input.anyKeyDown == false) {
