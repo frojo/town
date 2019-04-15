@@ -16,17 +16,27 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         while (Input.anyKeyDown == false) {
             yield return null;
         }
+        // yield return null;
 	}
 
-	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {	
-		yield return null;
+	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {
+        Debug.Log("run options!");
+        yield return null;
 	}
 
 	public override IEnumerator RunCommand(Yarn.Command command) {
-		yield return null;
+        Debug.Log("run command: " + command.text);
+        yield return null;
 	}
 
-	public override IEnumerator DialogueComplete() {
-		yield return null;
+    public override IEnumerator DialogueStarted()
+    {
+        Debug.Log("dialogue started");
+        yield return null;
+    }
+
+    public override IEnumerator DialogueComplete() {
+        Debug.Log("dialogue completed");
+        yield return null;
 	}
 }
