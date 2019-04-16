@@ -16,6 +16,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     public Sprite coachPortrait;
     public Sprite playerPortrait;
 
+    // hacky. probaby want to do this differently later
+    public Animator protagAnimator;
+
 	public override IEnumerator RunLine(Yarn.Line line) {
 		Debug.Log(line.text);
 		displayedText.text = line.text;
@@ -41,6 +44,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
 
         string dialogue = nameDialogue[1];
+        
+        // 
         displayedText.text = dialogue.TrimStart(' ');
       
 
@@ -58,7 +63,15 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
 	public override IEnumerator RunCommand(Yarn.Command command) {
         Debug.Log("run command: " + command.text);
-        yield return null;
+        if (command.text == "protag_get_up")
+        {
+            Debug.Log("animate protag getting up here");
+            protagAnimator.SetTrigger("get_up");
+            yield return new WaitForSeconds(
+                protagAnimator.GetNextAnimatorStateInfo(0).length +
+                protagAnimator.GetNextAnimatorStateInfo(0).normalizedTime);
+        }
+        // yield return null;
 	}
 
     public override IEnumerator DialogueStarted()
