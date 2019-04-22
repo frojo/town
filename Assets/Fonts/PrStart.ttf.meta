@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac2bf56ba12054125b846245fe85f384
+guid: 14bdde22615e8da4793d74ebea58439a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,15 +8,15 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Memoria
+  fontName: Press Start
   fontNames:
-  - Memoria
+  - Press Start
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 0
+  shouldRoundAdvanceValue: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
