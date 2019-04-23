@@ -17,11 +17,6 @@ public class PlayerController : MonoBehaviour {
         float v_x = Input.GetAxis("horizontal") * walkSpeed;
         float v_y = Input.GetAxis("vertical") * walkSpeed;
 
-
         transform.Translate(v_x, v_y, 0);
-
-
-        //}
-		
 	}
 }
