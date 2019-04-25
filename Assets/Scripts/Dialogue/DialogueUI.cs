@@ -14,13 +14,11 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     // UI element that represents the character currently talking
     public Image currentCharacter;
 
-    // pairs of (nameOfCharacter, characterPortraitSprite)
-    // public Dictionary<string, Sprite> portraitSprites;
     public Sprite coachPortrait;
     public Sprite playerPortrait;
 
     // hacky. probaby want to do this differently later
-    public Animator protagAnimator;
+    public PlayerController player;
 
     bool lineFullyShown = false;
     bool newSegment = false;
@@ -30,7 +28,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
 	public override IEnumerator RunLine(Yarn.Line line) {
 		Debug.Log(line.text);
-		displayedText.text = line.text;
+        dialogueUIFrame.SetActive(true);
+        displayedText.text = line.text;
 
         string[] nameDialogue = line.text.Split(':');
         if (nameDialogue.Length != 2)
@@ -76,7 +75,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                     lineFullyShown = true;
                 } else { // still haven't shown the full line
                     // wait for player input to show the next line
-                    while (Input.anyKeyDown == false)
+                    while (!Input.GetButtonDown("interact"))
                     {
                         Debug.Log("waiting for user input to show rest of line");
                         yield return null;
@@ -94,9 +93,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         // }
       
 
-        // Wait for any user input
-        while ( Input.anyKeyDown == false) {
-            Debug.Log("waiting for user input");
+        // wait for user input to display next line
+        while (!Input.GetButtonDown("interact")) {
+            Debug.Log("waiting for user input to show next line");
             yield return null;
         }
         Debug.Log("user input!");
@@ -110,16 +109,28 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
 	public override IEnumerator RunCommand(Yarn.Command command) {
         Debug.Log("run command: " + command.text);
-        if (command.text == "protag_get_up")
-        {
-            Debug.Log("animate protag getting up here");
-            protagAnimator.SetTrigger("get_up");
-            yield return new WaitForSeconds(
-                protagAnimator.GetNextAnimatorStateInfo(0).length +
-                protagAnimator.GetNextAnimatorStateInfo(0).normalizedTime);
+
+        string[] commandSplit = command.text.Split(' ');
+        Debug.Log("first split : " + commandSplit[0]);
+
+        if (commandSplit[0] == "hideui") {
+            dialogueUIFrame.SetActive(false);
+            yield return null;
+        } else if (commandSplit[0] == "wait") {
+            float seconds = 0.0f;
+            float.TryParse(commandSplit[1], out seconds);
+            yield return new WaitForSeconds(seconds);
+        } else if (command.text == "protag_passed_out_eyes_closed") {
+            player.AnimatePassedOut();
+            yield return null;
+        } else if (command.text == "protag_passed_out_eyes_open") {
+            player.AnimatePassedOutEyesOpen();
+            yield return null;
+        } else if (command.text == "protag_idle") {
+            player.AnimateIdle();
+            yield return null;
         }
-        // yield return null;
-	}
+    }
 
     public override IEnumerator DialogueStarted()
     {

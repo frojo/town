@@ -1,12 +1,16 @@
 title: Start
 tags: 
 colorID: 0
-position: -502,-214
+position: -502,-212
 ---
 Coach: Wake up, Mr. Player. 
-<< protag_get_up >>
+<<protag_passed_out_eyes_open>>
 Coach: You have a rough night? Life's gonna be hard on you if this is what you look like on a Wednesday.
-<< protag_vomit >>
+<<hideui>>
+<<wait 1>>
+<<protag_idle>>
+<<wait 1>>
+<<protag_vomit>>
 Player: I feel a million times better. Thanks Coach P. I'll keep that in mind.
 Coach: Please get out of here. We are about to play a tournament.
 Player: No problem. Now which way is the exit again...? I never liked tennis courts bcause there's only one or two ways out. And if someone chains the gate... then what?

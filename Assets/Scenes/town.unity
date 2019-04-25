@@ -275,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347318678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.65, y: 0.8125, z: 0}
+  m_LocalPosition: {x: -0.48, y: 1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 0.075
+  facingRight: 0
+  inputEnabled: 0
   animator: {fileID: 347318681}
   sprite: {fileID: 347318679}
 --- !u!1 &519420028
@@ -509,6 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1752913207}
+  player: {fileID: 347318682}
 --- !u!4 &922469280
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +629,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1144241302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: 0.25, z: 0}
+  m_LocalPosition: {x: -1.63, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1023,7 +1026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: f7c94e3cd834b214090aba8963ac002d, type: 3}
+  - {fileID: 4900000, guid: 75615bf813f6d734f883a729d0ea6658, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -1061,7 +1064,7 @@ MonoBehaviour:
   currentCharacter: {fileID: 1679595766}
   coachPortrait: {fileID: 21300000, guid: e767fe65f92129d43ae07e665ef55937, type: 3}
   playerPortrait: {fileID: 21300000, guid: 054aaf394bb83294ea45e84ee308eb9f, type: 3}
-  protagAnimator: {fileID: 347318681}
+  player: {fileID: 347318682}
 --- !u!114 &1752913210
 MonoBehaviour:
   m_ObjectHideFlags: 0

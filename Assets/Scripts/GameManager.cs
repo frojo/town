@@ -6,20 +6,36 @@ using Yarn.Unity;
 public class GameManager : MonoBehaviour {
 
     public DialogueRunner dialogue;
+    public PlayerController player;
 
     bool dialogueStarted = false;
 
+    bool startedFirstCutscene = false;
+    // bool inFirstCutscene = false;
+
 	// Use this for initialization
 	void Start () {
-		
+        player.inputEnabled = false;
+        player.AnimatePassedOut();
+        player.facingRight = false;
+
+        // start first cutscene
+        // player is lying on the ground
+        // coach is standing over him
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!dialogueStarted && Input.anyKeyDown)
-        {
-            dialogueStarted = true;
+        // first scene
+        // coach watches as player is dead on the ground
+
+        if (!startedFirstCutscene && Input.GetButtonDown("interact")) {
+            startedFirstCutscene = true;
             dialogue.StartDialogue();
         }
-	}
+
+    }
+
+
 }
