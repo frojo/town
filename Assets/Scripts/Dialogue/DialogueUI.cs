@@ -113,22 +113,40 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         string[] commandSplit = command.text.Split(' ');
         Debug.Log("first split : " + commandSplit[0]);
 
-        if (commandSplit[0] == "hideui") {
+        if (commandSplit[0] == "hideui")
+        {
             dialogueUIFrame.SetActive(false);
             yield return null;
-        } else if (commandSplit[0] == "wait") {
+        }
+        else if (commandSplit[0] == "wait")
+        {
             float seconds = 0.0f;
             float.TryParse(commandSplit[1], out seconds);
             yield return new WaitForSeconds(seconds);
-        } else if (command.text == "protag_passed_out_eyes_closed") {
+        }
+        else if (command.text == "protag_passed_out_eyes_closed")
+        {
             player.AnimatePassedOut();
             yield return null;
-        } else if (command.text == "protag_passed_out_eyes_open") {
+        }
+        else if (command.text == "protag_passed_out_eyes_open")
+        {
             player.AnimatePassedOutEyesOpen();
             yield return null;
-        } else if (command.text == "protag_idle") {
+        }
+        else if (command.text == "protag_idle")
+        {
             player.AnimateIdle();
             yield return null;
+        }
+        else if (command.text == "protag_still")
+        {
+            player.AnimateStill();
+            yield return null;
+        }
+        else if (command.text == "protag_vom")
+        {
+            yield return player.AnimateVom();
         }
     }
 

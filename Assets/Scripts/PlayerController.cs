@@ -58,9 +58,27 @@ public class PlayerController : MonoBehaviour {
         animator.SetTrigger("idle");
     }
 
-    public void AnimateVomit()
+    // still is different from idle. there's no "bounce"
+    public void AnimateStill()
     {
-        animator.SetTrigger("vomit");
+        animator.SetTrigger("still");
+    }
+
+    // make this a coroutine that waits until the vom animation is done
+    public IEnumerator AnimateVom()
+    {
+        animator.SetTrigger("vom");
+        animator.GetCurrentAnimatorStateInfo(0);
+
+        // wait for animator to get to the vom state
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("protag-vom"))
+        {
+            yield return null;
+        }
+
+        // wait for vom animation to end
+        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(waitTime);
     }
 
 
