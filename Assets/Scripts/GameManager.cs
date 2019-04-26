@@ -13,12 +13,17 @@ public class GameManager : MonoBehaviour {
     bool startedFirstCutscene = false;
     // bool inFirstCutscene = false;
 
+    bool debug = false;
+
 	// Use this for initialization
 	void Start () {
-        player.inputEnabled = false;
-        player.AnimatePassedOut();
-        player.facingRight = false;
-
+        if (!debug)
+        {
+            player.inputEnabled = false;
+            player.AnimatePassedOut();
+            player.facingRight = false;
+        }
+        if (debug) player.inputEnabled = true;
         // start first cutscene
         // player is lying on the ground
         // coach is standing over him
@@ -30,11 +35,16 @@ public class GameManager : MonoBehaviour {
         // first scene
         // coach watches as player is dead on the ground
 
-        if (!startedFirstCutscene && Input.GetButtonDown("interact")) {
+        if (!startedFirstCutscene && Input.GetButtonDown("interact") && !debug) {
             startedFirstCutscene = true;
             dialogue.StartDialogue();
         }
 
+    }
+
+    public void FinishedFirstCutscene()
+    {
+        player.inputEnabled = true;
     }
 
 

@@ -64,11 +64,9 @@ public class PlayerController : MonoBehaviour {
         animator.SetTrigger("still");
     }
 
-    // make this a coroutine that waits until the vom animation is done
     public IEnumerator AnimateVom()
     {
         animator.SetTrigger("vom");
-        animator.GetCurrentAnimatorStateInfo(0);
 
         // wait for animator to get to the vom state
         while (!animator.GetCurrentAnimatorStateInfo(0).IsName("protag-vom"))

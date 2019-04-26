@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
+    public GameManager gameManager;
+
     // UI element of the entire displayed dialogue
     public GameObject dialogueUIFrame;
 
@@ -160,6 +162,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     public override IEnumerator DialogueComplete() {
         Debug.Log("dialogue completed");
         dialogueUIFrame.SetActive(false);
+        gameManager.FinishedFirstCutscene();
+
         yield return null;
 	}
 }
