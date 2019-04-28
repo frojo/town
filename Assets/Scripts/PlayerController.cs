@@ -4,78 +4,87 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float walkSpeed;
-    public bool facingRight;
-
+    public float runSpeed;
     public bool inputEnabled = false;
 
-    public Animator animator;
-    public SpriteRenderer sprite;
+    // drawing
+    public bool facingRight;
+    Animator anim;
+    SpriteRenderer spr;
+
+    // physics
+    Rigidbody2D rb2d;
 
 	// Use this for initialization
 	void Start () {
-		
+        anim = GetComponent<Animator>();
+        spr = GetComponent<SpriteRenderer>();
+        rb2d = GetComponent<Rigidbody2D>();
 	}
 
     // Update is called once per frame
     void Update() {
 
-        // take input and calc internal state
-        float v_x = 0;
-        float v_y = 0;
+	}
+
+    // we're using unity's physics "just" for collision detection
+    private void FixedUpdate()
+    {
+        Vector2 v = Vector2.zero;
         if (inputEnabled)
         {
             // "raw" means only 1, 0, or -1. no ramping
-            v_x = Input.GetAxisRaw("horizontal") * walkSpeed;
-            v_y = Input.GetAxisRaw("vertical") * walkSpeed;
-
-            // nb: we don't change facingRight if v_x == 0
-            if (v_x > 0) facingRight = true;
-            else if (v_x < 0) facingRight = false;
-
+            v.x = Input.GetAxisRaw("horizontal") * runSpeed;
+            v.y = Input.GetAxisRaw("vertical") * runSpeed;
         }
-        bool moving = v_x != 0 || v_y != 0;
-        transform.Translate(v_x, v_y, 0);
+
+        // move player
+        rb2d.velocity = v;
 
         // draw player
-        sprite.flipX = !facingRight;
-        animator.SetBool("moving", moving);
-	}
+        // nb: we don't change facingRight if v_x == 0
+        if (v.x > 0) facingRight = true;
+        else if (v.x < 0) facingRight = false;
+        spr.flipX = !facingRight;
+
+        bool moving = v.x != 0 || v.y != 0;
+        anim.SetBool("moving", moving);
+    }
 
     public void AnimatePassedOut()
     {
         Debug.Log("player passing out");
-        animator.SetTrigger("passed_out_eyes_closed");
+        anim.SetTrigger("passed_out_eyes_closed");
     }
 
     public void AnimatePassedOutEyesOpen()
     {
-        animator.SetTrigger("passed_out_eyes_open");
+        anim.SetTrigger("passed_out_eyes_open");
     }
 
     public void AnimateIdle()
     {
-        animator.SetTrigger("idle");
+        anim.SetTrigger("idle");
     }
 
     // still is different from idle. there's no "bounce"
     public void AnimateStill()
     {
-        animator.SetTrigger("still");
+        anim.SetTrigger("still");
     }
 
     public IEnumerator AnimateVom()
     {
-        animator.SetTrigger("vom");
+        anim.SetTrigger("vom");
 
         // wait for animator to get to the vom state
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("protag-vom"))
+        while (!anim.GetCurrentAnimatorStateInfo(0).IsName("protag-vom"))
         {
             yield return null;
         }
 
         // wait for vom animation to end
-        float waitTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        float waitTime = anim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(waitTime);
     }
 
