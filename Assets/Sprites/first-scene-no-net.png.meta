@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 4be4ebf05b39d3b419eea790cb299d3e
+guid: 7b18f637e55b14deba7b21bfe28e9438
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tennis-net_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -83,27 +82,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: tennis-net_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 135
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d137909672e8fda478292821bf2cba27
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
