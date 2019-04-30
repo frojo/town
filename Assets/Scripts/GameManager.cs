@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     bool startedFirstCutscene = false;
     // bool inFirstCutscene = false;
 
-    bool debug = true;
+    public bool debug = false;
 
 	// Use this for initialization
 	void Start () {
