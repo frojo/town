@@ -19,6 +19,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     public Sprite coachPortrait;
     public Sprite playerPortrait;
 
+    public Character[] characters;
+    Dictionary<string, Character> charDict = new Dictionary<string, Character>();
+
     // hacky. probaby want to do this differently later
     public PlayerController player;
 
@@ -28,32 +31,27 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     int numCharsShownSoFar = 0;
     string currentFullLine;
 
+    void Start() {
+        foreach (Character character in characters) {
+            charDict.Add(character.name, character);
+        }
+    }
+
 	public override IEnumerator RunLine(Yarn.Line line) {
 		Debug.Log(line.text);
         dialogueUIFrame.SetActive(true);
         displayedText.text = line.text;
 
-        string[] nameDialogue = line.text.Split(':');
-        if (nameDialogue.Length != 2)
+        string[] nameLine = line.text.Split(':');
+        if (nameLine.Length != 2)
         {
             Debug.Log("Not properly formatted line (split)");
         }
 
-        string name = nameDialogue[0];
-        if (name == "Player")
-        {
-            currentCharacter.sprite = playerPortrait;
-        }
-        else if (name == "Coach")
-        {
-            currentCharacter.sprite = coachPortrait;
-        }
-        else
-        {
-            Debug.Log("Not properly formatted line (character name)");
-        }
+        string name = nameLine[0];
+        currentCharacter.sprite = charDict[name].portrait;
 
-        currentFullLine = nameDialogue[1].TrimStart(' ');
+        currentFullLine = nameLine[1].TrimStart(' ');
         displayedText.text = currentFullLine;
  
         // These next few lines of bullshit let the player click through
@@ -88,11 +86,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                 }
             }
         }
-        // if (displayedText.cachedTextGenerator.characterCountVisible != fullLine.Length)
-        // {
-            // line too long to fully display
-            
-        // }
+
       
 
         // wait for user input to display next line
@@ -154,7 +148,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     public override IEnumerator DialogueStarted()
     {
-        Debug.Log("dialogue started");
+        Debug.Log("dialogue started!");
         dialogueUIFrame.SetActive(true);
         yield return null;
     }

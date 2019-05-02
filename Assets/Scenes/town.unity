@@ -571,7 +571,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 429369838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2700005, y: -5.781, z: 0}
+  m_LocalPosition: {x: 4.74, y: -6.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1255200463}
@@ -723,7 +723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0025024414, y: -0.17248535}
+  m_AnchoredPosition: {x: -0.0024414062, y: -0.17248535}
   m_SizeDelta: {x: 0.0050049, y: 0.345}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723141320
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1752913207}
   player: {fileID: 347318682}
-  debug: 1
+  debug: 0
 --- !u!4 &922469280
 Transform:
   m_ObjectHideFlags: 0
@@ -1791,7 +1791,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1623850245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0200005, y: -5.8, z: 0}
+  m_LocalPosition: {x: 4.0200005, y: -6.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1255200463}
@@ -2144,8 +2144,13 @@ MonoBehaviour:
   dialogueUIFrame: {fileID: 1021171793}
   displayedText: {fileID: 1756526872}
   currentCharacter: {fileID: 1679595766}
-  coachPortrait: {fileID: 21300000, guid: e767fe65f92129d43ae07e665ef55937, type: 3}
-  playerPortrait: {fileID: 21300000, guid: 054aaf394bb83294ea45e84ee308eb9f, type: 3}
+  coachPortrait: {fileID: 0}
+  playerPortrait: {fileID: 0}
+  characters:
+  - {fileID: 11400000, guid: fb48c34ff01094c47ac7a5bd8045a876, type: 2}
+  - {fileID: 11400000, guid: 99e73b208e16f49429cd818bc2b62612, type: 2}
+  - {fileID: 11400000, guid: e5a837d5ee90c4d2985d7647848d30fd, type: 2}
+  - {fileID: 11400000, guid: aef89938e0b284e789212c0423d1c5be, type: 2}
   player: {fileID: 347318682}
 --- !u!114 &1752913210
 MonoBehaviour:
