@@ -7,9 +7,6 @@ public class Door : MonoBehaviour {
 
     public bool isOpen = false;
 
-    // has callback for letting player interact with door
-    public Interactable interactable;
-
 	// Use this for initialization
 	void Start () {
 		if (isOpen)
@@ -18,10 +15,6 @@ public class Door : MonoBehaviour {
         } else
         {
             Close();
-        }
-
-        if (interactable) {
-            interactable.Interact = Toggle;
         }
 	}
 	

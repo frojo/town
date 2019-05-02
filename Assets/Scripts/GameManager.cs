@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 
         if (!startedFirstCutscene && Input.GetButtonDown("interact") && !debug) {
             startedFirstCutscene = true;
-            dialogue.StartDialogue();
+            dialogue.StartDialogue("coach");
         }
 
     }

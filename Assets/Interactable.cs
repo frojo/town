@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour {
-
-	// this is the callback that other things hook into
-	public delegate void InteractType();
-	public InteractType Interact;
+    
+    // can assign in inspector to any function
+    public UnityEvent triggeredEvent;
 
 	// sign for instructions to display for interacting
 	public GameObject sign;
@@ -38,7 +38,7 @@ public class Interactable : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D o) {
 		if (o.CompareTag("Player")) {
 			if (Input.GetButtonDown("interact")) {
-				Interact();
+                triggeredEvent.Invoke();
 			}
 		}
 	}
