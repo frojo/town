@@ -1,7 +1,7 @@
-title: Start
+title: coach
 tags: 
 colorID: 0
-position: -502,-212
+position: -796,-258
 ---
 Coach: Wake up, Mr. Player. 
 <<protag_passed_out_eyes_open>>
@@ -16,4 +16,17 @@ Coach: Please get out of here. We are about to play a tournament.
 Player: No problem. Now which way is the exit again...? I never liked tennis courts bcause there's only one or two ways out. And if someone chains the gate... then what?
 Coach: Same way as you took in, son.
 Player: If only I could remember...
+===
+title: tennis-players
+tags: 
+colorID: 0
+position: -493,-249
+---
+Tennis1: Waking up on the courts again? Classic.
+Tennis2: Hit rock bottom yet?
+Player: Not yet. Not even close... Listen, what period is it?
+Tennis2: You can probably still catch third period if you run.
+Player: In that case... I'll just walk to fourth period.
+Tennis1: I have advil... and oxycoton...
+Player: I'll take some oxy.
 ===

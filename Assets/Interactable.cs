@@ -23,13 +23,15 @@ public class Interactable : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D o) {
 		if (o.CompareTag("Player")) {
+            Debug.Log("display!");
 			sign.SetActive(true);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D o) {
 		if (o.CompareTag("Player")) {
-			sign.SetActive(false);
+            Debug.Log("hide!");
+            sign.SetActive(false);
 		}
 	}
 	
