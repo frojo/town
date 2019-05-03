@@ -7,8 +7,14 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     public GameManager gameManager;
 
-    // UI element of the entire displayed dialogue
+    // parent ui dialogue element
     public GameObject dialogueUIFrame;
+
+    // box for the main dialogue
+    public GameObject main;
+
+    // boxes for the optoins
+    public DialogueOptionsUI options;
 
     // UI element that displays lines
 	public Text displayedText;
@@ -100,18 +106,68 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 	public override IEnumerator RunOptions(Yarn.Options optionsCollection, 
         Yarn.OptionChooser optionChooser) {
 
-        // todo: make sure that the options aren't too big to fit in the box
-        // todo: disable portrait?
+        Debug.Log("run options!");
+        options.gameObject.SetActive(true);
 
-        displayedText.text = optionsCollection.options[0];
+        // todo: make sure that the options aren't too big to fit in the box
+        // i don't really know how to check this without actually blitting the
+        // text (if i figure that out, change the convoluted logic in RunCommand)
+
+        int numOptions = optionsCollection.options.Count;
+        if (numOptions > options.Count())
+        {
+            Debug.LogWarning("Too many options");
+        }
+
+        // display all needed options        
+        for (int i = 0; i < options.Count(); i++)
+        {
+            DialogueOption option = options.GetOption(i);
+            if (i < numOptions)
+            {
+                option.gameObject.SetActive(true);
+                option.SetText(optionsCollection.options[i]);
+            }
+            else
+            {
+                option.gameObject.SetActive(false);
+            }
+        }
+        int currCursorOption = numOptions;
+
+        // quick explanation of how cursor math works. bottom-most option is
+        // option 0. the one above is option 1 and so on. so with 3 options
+        // where the cursor is currently on the the top-most option:
+        // -> [option 2]
+        //    [option 1]
+        //    [option 0]
+
+        // enable and put cursor next to topmost option
+        options.PlaceCursor(currCursorOption);
+
         while (!Input.GetButtonDown("interact"))
         {
+            // move cursor if we get an up or down input
+            bool moveCursor = Input.GetButtonDown("vertical");
+            if (moveCursor)
+            {
+                float updown = Input.GetAxisRaw("vertical");
+                if (updown == 1)
+                {
+                    Debug.Log("move cursor up");
+                    currCursorOption = (currCursorOption + 1) % numOptions;
+                }
+                else { // updown == -1 (can't be 0 if it was pressed)
+                    Debug.Log("move cursor down");
+                    currCursorOption = (currCursorOption - 1) % numOptions;
+                }
+                options.PlaceCursor(currCursorOption);
+            }
             yield return null;
         }
 
-        optionChooser(0);
-        
-        Debug.Log("run options!");
+        options.gameObject.SetActive(false);
+        optionChooser(currCursorOption);
         yield return null;
 	}
 
@@ -162,6 +218,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     {
         Debug.Log("dialogue started!");
         dialogueUIFrame.SetActive(true);
+        main.SetActive(true);
+        options.gameObject.SetActive(false);
         yield return null;
     }
 

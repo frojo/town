@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
         if (!debug)
         {
             player.inputEnabled = false;
