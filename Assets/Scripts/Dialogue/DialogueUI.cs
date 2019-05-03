@@ -16,9 +16,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     // UI element that represents the character currently talking
     public Image currentCharacter;
 
-    public Sprite coachPortrait;
-    public Sprite playerPortrait;
-
+    // unity can't display dictionaries in the inspector
+    // so we keep a dict, but also a list to be edited in the inspector
     public Character[] characters;
     Dictionary<string, Character> charDict = new Dictionary<string, Character>();
 
@@ -97,8 +96,21 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         Debug.Log("user input!");
         yield return null;
 	}
+    
+	public override IEnumerator RunOptions(Yarn.Options optionsCollection, 
+        Yarn.OptionChooser optionChooser) {
 
-	public override IEnumerator RunOptions(Yarn.Options optionsCollection, Yarn.OptionChooser optionChooser) {
+        // todo: make sure that the options aren't too big to fit in the box
+        // todo: disable portrait?
+
+        displayedText.text = optionsCollection.options[0];
+        while (!Input.GetButtonDown("interact"))
+        {
+            yield return null;
+        }
+
+        optionChooser(0);
+        
         Debug.Log("run options!");
         yield return null;
 	}

@@ -26,7 +26,13 @@ Tennis1: Waking up on the courts again? Classic.
 Tennis2: Hit rock bottom yet?
 Player: Not yet. Not even close... Listen, what period is it?
 Tennis2: You can probably still catch third period if you run.
-Player: In that case... I'll just walk to fourth period.
-Tennis1: I have advil... and oxycoton...
-Player: I'll take some oxy.
+-> I'll just walk to fourth period.
+    Player: In that case... I'll just walk to fourth period.
+-> I'm already running!
+    Player: I'm already running.
+Tennis1: I have Advil... and oxycotton...
+-> Advil
+    Player: I'll take some advil.
+-> Oxycotton
+    Player: I'll take an oxy.
 ===
