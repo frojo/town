@@ -44,10 +44,5 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void FinishedFirstCutscene()
-    {
-        player.inputEnabled = true;
-    }
-
 
 }

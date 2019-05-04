@@ -220,13 +220,14 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         dialogueUIFrame.SetActive(true);
         main.SetActive(true);
         options.gameObject.SetActive(false);
+        player.inputEnabled = false;
         yield return null;
     }
 
     public override IEnumerator DialogueComplete() {
         Debug.Log("dialogue completed");
         dialogueUIFrame.SetActive(false);
-        gameManager.FinishedFirstCutscene();
+        player.inputEnabled = true;
 
         yield return null;
 	}

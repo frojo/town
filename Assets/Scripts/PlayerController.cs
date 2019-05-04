@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class PlayerController : MonoBehaviour {
 
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 
     // physics
     Rigidbody2D rb2d;
+
+   public DialogueRunner dialogue;
 
 	// Use this for initialization
 	void Start () {
@@ -86,6 +89,11 @@ public class PlayerController : MonoBehaviour {
         // wait for vom animation to end
         float waitTime = anim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(waitTime);
+    }
+
+    public void StartDialogue(string node) {
+        inputEnabled = false;
+        dialogue.StartDialogue(node);
     }
 
 
