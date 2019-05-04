@@ -91,11 +91,6 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(waitTime);
     }
 
-    public void StartDialogue(string node) {
-        inputEnabled = false;
-        dialogue.StartDialogue(node);
-    }
-
 
 
 
