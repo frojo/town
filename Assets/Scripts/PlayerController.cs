@@ -90,8 +90,4 @@ public class PlayerController : MonoBehaviour {
         float waitTime = anim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(waitTime);
     }
-
-
-
-
 }

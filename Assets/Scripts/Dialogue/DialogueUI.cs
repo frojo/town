@@ -113,7 +113,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         // i don't really know how to check this without actually blitting the
         // text (if i figure that out, change the convoluted logic in RunCommand)
 
-        int numOptions = optionsCollection.options.Count;
+        uint numOptions = (uint)optionsCollection.options.Count;
         if (numOptions > options.Count())
         {
             Debug.LogWarning("Too many options");
@@ -133,7 +133,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                 option.gameObject.SetActive(false);
             }
         }
-        int currCursorOption = numOptions;
 
         // quick explanation of how cursor math works. bottom-most option is
         // option 0. the one above is option 1 and so on. so with 3 options
@@ -143,6 +142,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         //    [option 0]
 
         // enable and put cursor next to topmost option
+        uint currCursorOption = numOptions - 1;
         options.PlaceCursor(currCursorOption);
 
         while (!Input.GetButtonDown("interact"))
@@ -154,11 +154,9 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                 float updown = Input.GetAxisRaw("vertical");
                 if (updown == 1)
                 {
-                    Debug.Log("move cursor up");
                     currCursorOption = (currCursorOption + 1) % numOptions;
                 }
                 else { // updown == -1 (can't be 0 if it was pressed)
-                    Debug.Log("move cursor down");
                     currCursorOption = (currCursorOption - 1) % numOptions;
                 }
                 options.PlaceCursor(currCursorOption);
@@ -167,7 +165,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
 
         options.gameObject.SetActive(false);
-        optionChooser(currCursorOption);
+        optionChooser((int)currCursorOption);
         yield return null;
 	}
 

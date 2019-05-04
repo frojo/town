@@ -34,7 +34,7 @@ public class DialogueOptionsUI : MonoBehaviour {
         return options[i];
     }
 
-    public void PlaceCursor(int optionNum)
+    public void PlaceCursor(uint optionNum)
     {
         if (optionNum > options.Length)
         {
