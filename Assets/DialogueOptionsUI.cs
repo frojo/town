@@ -29,7 +29,7 @@ public class DialogueOptionsUI : MonoBehaviour {
     {
         if (i > options.Length)
         {
-            Debug.Log("error: options index out of range");
+            Debug.LogWarning("error: options index out of range");
         }
         return options[i];
     }
@@ -38,10 +38,9 @@ public class DialogueOptionsUI : MonoBehaviour {
     {
         if (optionNum > options.Length)
         {
-            Debug.Log("error: options index out of range");
+            Debug.LogWarning("error: options index out of range");
         }
 
-        Debug.Log("cursor on option " + optionNum);
         // todo: make this more performant (would probably need to 
         // have a MoveCursor())
         for (int i = 0; i < options.Length; i++)

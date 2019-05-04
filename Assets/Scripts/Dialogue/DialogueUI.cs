@@ -43,7 +43,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     }
 
 	public override IEnumerator RunLine(Yarn.Line line) {
-		Debug.Log(line.text);
         dialogueUIFrame.SetActive(true);
         displayedText.text = line.text;
 
@@ -82,7 +81,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                     // wait for player input to show the next line
                     while (!Input.GetButtonDown("interact"))
                     {
-                        Debug.Log("waiting for user input to show rest of line");
                         yield return null;
                     }
                     charsCounted = false;
@@ -96,17 +94,13 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
         // wait for user input to display next line
         while (!Input.GetButtonDown("interact")) {
-            Debug.Log("waiting for user input to show next line");
             yield return null;
         }
-        Debug.Log("user input!");
         yield return null;
 	}
     
 	public override IEnumerator RunOptions(Yarn.Options optionsCollection, 
         Yarn.OptionChooser optionChooser) {
-
-        Debug.Log("run options!");
         options.gameObject.SetActive(true);
 
         // todo: make sure that the options aren't too big to fit in the box
@@ -170,10 +164,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 	}
 
 	public override IEnumerator RunCommand(Yarn.Command command) {
-        Debug.Log("run command: " + command.text);
-
         string[] commandSplit = command.text.Split(' ');
-        Debug.Log("first split : " + commandSplit[0]);
 
         if (commandSplit[0] == "hideui")
         {
@@ -214,7 +205,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     public override IEnumerator DialogueStarted()
     {
-        Debug.Log("dialogue started!");
         dialogueUIFrame.SetActive(true);
         main.SetActive(true);
         options.gameObject.SetActive(false);
@@ -223,7 +213,6 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     }
 
     public override IEnumerator DialogueComplete() {
-        Debug.Log("dialogue completed");
         dialogueUIFrame.SetActive(false);
         player.inputEnabled = true;
 
