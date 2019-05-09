@@ -150,7 +150,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
                 {
                     currCursorOption = (currCursorOption + 1) % numOptions;
                 }
-                else { // updown == -1 (can't be 0 if it was pressed)
+                else { // updown == -1 (can't be 0 if button was pressed)
                     currCursorOption = (currCursorOption - 1) % numOptions;
                 }
                 options.PlaceCursor(currCursorOption);

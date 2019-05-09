@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour {
     public DialogueRunner dialogue;
     public PlayerController player;
 
-    bool dialogueStarted = false;
-
+    public bool poop;
     bool startedFirstCutscene = false;
     // bool inFirstCutscene = false;
 
@@ -17,6 +16,9 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("start!");
+        poop = true;
+
         if (!debug)
         {
             player.inputEnabled = false;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour {
 
         if (!startedFirstCutscene && Input.GetButtonDown("interact") && !debug) {
             startedFirstCutscene = true;
+            Debug.Log("starting the first convo, fool");
             dialogue.StartDialogue("coach");
         }
 
