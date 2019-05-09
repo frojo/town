@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: abc85119a40158345aabe985bb8aa2d7
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: tennis-player2_0
-    21300002: tennis-player2_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: tennis-player2_0
+  - first:
+      213: 21300002
+    second: tennis-player2_1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -101,6 +105,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f0d176239a8da4b5ca1dc7cdfaccc6a3
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -121,6 +126,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 09555ef5575fd497eba2998fbe7932e7
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -129,10 +135,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: b8d5063654c11384a97e4b290ae0620b
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
