@@ -434,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235945257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71, y: 9.3, z: 0}
+  m_LocalPosition: {x: 71, y: 9.3, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1052811712}
@@ -1345,7 +1345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620400639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1246390348}
@@ -2055,7 +2055,7 @@ GameObject:
   - component: {fileID: 922469280}
   - component: {fileID: 922469279}
   m_Layer: 0
-  m_Name: game_manager
+  m_Name: game_coordinator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2068,14 +2068,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922469278}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aaae468f1b16f74ba99880ee26be413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1752913207}
   player: {fileID: 347318682}
-  poop: 0
   debug: 1
 --- !u!4 &922469280
 Transform:
@@ -3016,7 +3015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246390347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1162927307}
@@ -4045,7 +4044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7f60170a65441778771c481425e954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 922469279}
+  gameCoordinator: {fileID: 0}
   dialogueUIFrame: {fileID: 1021171793}
   main: {fileID: 723141318}
   options: {fileID: 462321516}
@@ -4584,7 +4583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109244706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1005251575}
@@ -4770,7 +4769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928709856490232, guid: 50fea67176e08bc4d86691574dbce3e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4928709856490232, guid: 50fea67176e08bc4d86691574dbce3e2, type: 3}
       propertyPath: m_LocalRotation.x

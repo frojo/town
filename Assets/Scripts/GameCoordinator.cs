@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class GameManager : MonoBehaviour {
+public class GameCoordinator : MonoBehaviour {
 
     public DialogueRunner dialogue;
     public PlayerController player;
 
-    public bool poop;
     bool startedFirstCutscene = false;
-    // bool inFirstCutscene = false;
 
     public bool debug = false;
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("start!");
-        poop = true;
-
         if (!debug)
         {
             player.inputEnabled = false;

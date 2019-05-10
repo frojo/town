@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
-    public GameManager gameManager;
+    public GameCoordinator gameCoordinator;
 
     // parent ui dialogue element
     public GameObject dialogueUIFrame;

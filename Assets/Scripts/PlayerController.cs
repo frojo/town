@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("hello i am player");
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     // we're using unity's physics "just" for collision detection
     private void FixedUpdate()
     {
+        Debug.Log("player fixed update");
         Vector2 v = Vector2.zero;
         if (inputEnabled)
         {
