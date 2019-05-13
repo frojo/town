@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("hello i am player");
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D>();
