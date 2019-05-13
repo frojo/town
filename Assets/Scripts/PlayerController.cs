@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class PlayerController : MonoBehaviour {
 
     public float runSpeed;
     public bool inputEnabled = false;
+    public bool phoneUnlocked = false;
+    public Image phone;
 
     // drawing
     public bool facingRight;
@@ -33,13 +36,17 @@ public class PlayerController : MonoBehaviour {
     // we're using unity's physics "just" for collision detection
     private void FixedUpdate()
     {
-        Debug.Log("player fixed update");
         Vector2 v = Vector2.zero;
         if (inputEnabled)
         {
             // "raw" means only 1, 0, or -1. no ramping
             v.x = Input.GetAxisRaw("horizontal") * runSpeed;
             v.y = Input.GetAxisRaw("vertical") * runSpeed;
+
+            if (phoneUnlocked && Input.GetButtonDown("back")) {
+                phone.gameObject.SetActive(!phone.gameObject.activeSelf);
+            }
+
         }
 
         // move player
