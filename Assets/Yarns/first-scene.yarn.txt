@@ -20,7 +20,7 @@ Player: If only I could remember...
 title: tennis-players
 tags: 
 colorID: 0
-position: -493,-249
+position: -560,-386
 ---
 Tennis1: Waking up on the courts again? Classic.
 Tennis2: Hit rock bottom yet?
@@ -31,4 +31,49 @@ Tennis1: I have Advil... and oxycotton...
     Player: I'll take some Advil.
 -> Oxycotton
     Player: I'll take an oxy.
+===
+title: logan
+tags: 
+colorID: 0
+position: -295,-325
+---
+Logan: Hey man. You're a little later than usual.
+Player: Yeah, a little. Mmmm. I love the smell of American spirits in the morning.
+Logan: Want one?
+--> Sure
+    Player: Sure. I never know how you can afford the expensive kind
+    Logan: Hard work. Bribery. Thievery. Pick one.
+--> Nah
+    Player: I'm good.
+    Logan: Oh. That's... weird.
+    Player: Huh?
+    Logan: It's nothing. You just usually take it.
+    Player: I guess?
+Logan: You look like you slept outside. Where did you end up last night?
+Player: Outside.
+Logan: You missed Mr. Ham-and-Cheese lecture us on some dead guy named John Cheetos?
+Player: John Cheetos?
+Logan: Yup. Some writer or something
+Player: Cheever.
+Logan: God bless you.
+Player: No. You mean John Cheever.
+Logan: Sure, man. You're the genius. Still on for the party tonight? You should probably go home and change first. Or you know, go to class smelling like Lou Reed...
+-> Go home
+    Player: Yeah, I'm gonna go home. I'd be useless in class anyway.
+-> Go to class
+    Player: I might as well go to class.
+Logan: Weird. Are you sure?
+Player: Yeah?
+Logan: That can't be right.
+Player: What?
+Logan: This is weird. Why is this happening?
+Player: Are you okay?
+Logan: Something's not right. Did I fuck something up?
+Player: What are you talking about?
+<< gun >> 
+Logan: I guess we can try turning it off and on again.
+Player: What the fuck.
+Logan: Let's try this again.
+
+
 ===
