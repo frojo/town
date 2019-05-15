@@ -48,7 +48,6 @@ public class PhoneNotificationIcon : MonoBehaviour
                 hiddenStartPosition.anchoredPosition, hideSpeed);
         }
 
-        Debug.Log("hidden pos = " + hiddenStartPosition.position.ToString());
     }
 
     public void ShowNotification(uint numMessages)
