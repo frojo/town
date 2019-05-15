@@ -38,7 +38,7 @@ colorID: 0
 position: -295,-325
 ---
 Logan: Hey man. You're a little later than usual.
-Player: Yeah, just a little. Mmm, I love the smell of American spirits in the morning.
+Player: Yeah, just a little. I love the smell of American Spirits in the morning.
 Logan: Want one?
 -> Sure
     Player: Sure. I never know how you can afford the expensive kind.
