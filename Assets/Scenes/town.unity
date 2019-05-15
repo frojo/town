@@ -3645,6 +3645,7 @@ GameObject:
   - component: {fileID: 1163016793}
   - component: {fileID: 1163016795}
   - component: {fileID: 1163016794}
+  - component: {fileID: 1163016796}
   m_Layer: 0
   m_Name: logan
   m_TagString: Untagged
@@ -3735,6 +3736,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1163016796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163016792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd868d7dc8254e7287630889a69aac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 0
+  dialogue: {fileID: 0}
 --- !u!1001 &1170335327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,6 +5103,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aef89938e0b284e789212c0423d1c5be, type: 2}
   - {fileID: 11400000, guid: bb32f2db864e5d248b4ef9d84b0b2dea, type: 2}
   player: {fileID: 347318682}
+  logan: {fileID: 1163016796}
 --- !u!114 &1752913210
 MonoBehaviour:
   m_ObjectHideFlags: 0

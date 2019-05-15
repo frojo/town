@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Logan
   m_EditorClassIdentifier: 
   name: Logan
-  portrait: {fileID: 2111000344739398927, guid: ce9922a6f0e79014a975ed765b205ef7,
+  portrait: {fileID: 2405050218704073223, guid: ce9922a6f0e79014a975ed765b205ef7,
     type: 3}

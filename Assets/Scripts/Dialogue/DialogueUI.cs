@@ -29,6 +29,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     // hacky. probaby want to do this differently later
     public PlayerController player;
+    public LoganController logan;
 
     bool lineFullyShown = false;
     bool newSegment = false;
@@ -200,6 +201,14 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         else if (command.text == "protag_vom")
         {
             yield return player.AnimateVom();
+        }
+        else if (command.text == "logan_put_out_cig")
+        {
+            yield return logan.AnimatePutOutCig();
+        }
+        else if (command.text == "logan_pull_out_gun")
+        {
+            yield return logan.AnimatePullOutGun();
         }
     }
 

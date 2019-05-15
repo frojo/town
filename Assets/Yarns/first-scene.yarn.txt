@@ -35,9 +35,10 @@ Tennis1: I have Advil... and oxycotton...
 title: logan
 tags: 
 colorID: 0
-position: -295,-325
+position: -286,-325
 ---
 Logan: Hey man. You're a little later than usual.
+<<logan_pull_out_gun>>
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.
 Logan: Want one?
 -> Sure
@@ -56,7 +57,9 @@ Logan: Want one?
     Player: I guess?
 Logan: You look like you slept outside. Where did you end up last night?
 Player: Outside.
-<< extinguish cigarette >>
+Logan: Nice.
+<<hideui>>
+<<wait 2>>
 Logan: You missed Mr. Ham-and-Cheese lecture us on some dead guy named John Cheetos?
 Player: John Cheetos?
 Logan: Yup. Some writer or something
@@ -71,14 +74,16 @@ Logan: Sure, man. You're the genius. Still on for the party tonight? You should 
 Logan: Wait, really?
 Player: Yeah?
 Logan: That's... it's just that you usually |GO HOME|.
-<< pause and logan looks around >> 
+<<hideui>>
+<<wait 2>>
+<<logan_put_out_cig>>
 Logan: This isn't how it's supposed to happen.
 Player: What are you talking about, man.
 Logan: Something's not right. Did I fuck something up?
 Player: Logan. Are you okay? What are you talking about?
-<< gun >> 
+
 Logan: I guess we can try turning it off and on again.
-Player: Woah, what the fuck.
+Player: Woah, what the fuck dude.
 Logan: Let's try this again.
 
 

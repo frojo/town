@@ -71,6 +71,54 @@ TextureImporter:
   - first:
       213: 2111000344739398927
     second: logan_22
+  - first:
+      213: 7524368479342599639
+    second: logan_23
+  - first:
+      213: 1608596293003672179
+    second: logan_24
+  - first:
+      213: -5332225009389881417
+    second: logan_25
+  - first:
+      213: 7355682946322937744
+    second: logan_26
+  - first:
+      213: 574354847366747819
+    second: logan_27
+  - first:
+      213: 7662282798761225014
+    second: logan_28
+  - first:
+      213: -1141811908727838086
+    second: logan_29
+  - first:
+      213: 1869241643047879890
+    second: logan_30
+  - first:
+      213: 8761150820905364729
+    second: logan_31
+  - first:
+      213: -7155678433403957763
+    second: logan_32
+  - first:
+      213: 4203756039251696442
+    second: logan_33
+  - first:
+      213: 2405050218704073223
+    second: logan_34
+  - first:
+      213: 8129240816142654449
+    second: logan_35
+  - first:
+      213: 2484853146317348354
+    second: logan_36
+  - first:
+      213: 5402447048977481356
+    second: logan_37
+  - first:
+      213: -4608437814544856686
+    second: logan_38
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -189,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcffb715fae3937488ad25221367c8c6
+      spriteID: b91c622c55d6244f38bb42edb7737bc9
       internalID: 1547736620718820677
       vertices: []
       indices: 
@@ -210,7 +258,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde500747263c3e4f967be29dc35ae05
+      spriteID: f354eabc1023c4ef78f2eecbd24969b3
       internalID: -8242866394122329911
       vertices: []
       indices: 
@@ -231,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9541b45f98dbf8b43b8d93ab511b9607
+      spriteID: 802bf992f5a804c148b11158402c049f
       internalID: 108783326559521096
       vertices: []
       indices: 
@@ -252,7 +300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5d297d14ce760a4b839e4461ca6ac65
+      spriteID: 5f54fb7e806f144daa9b12afd7fea7eb
       internalID: 3238550762641526578
       vertices: []
       indices: 
@@ -273,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4102f6bd3411d640a984ff008cb7107
+      spriteID: bb94bbba4624442e9a71f5274c735c1b
       internalID: -2844926102402529199
       vertices: []
       indices: 
@@ -294,7 +342,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73486daed2e5766498e18bac9cba8a74
+      spriteID: bea902aa3f01b4d23818e36fd88562c4
       internalID: 3781353357831742519
       vertices: []
       indices: 
@@ -315,7 +363,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91cb79d2734e55049840f5071ffda017
+      spriteID: f375acfe559784a7b887377acf4506f7
       internalID: -5440436863182676620
       vertices: []
       indices: 
@@ -336,7 +384,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3bd7d6ab8ac5294e889e0e49369fce8
+      spriteID: f121c12e983ac4e77919d55362cc05b5
       internalID: 8018280749064901759
       vertices: []
       indices: 
@@ -357,7 +405,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62dcd098c4fa4784da59e8c0d1c8e547
+      spriteID: 9e3920de9294c477eb60674fe3400492
       internalID: -6351665793919750550
       vertices: []
       indices: 
@@ -378,7 +426,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32f4315f47f0b6c469ddaf8da824682d
+      spriteID: 9e85d68a4c50b429c9cff5d49807b0d6
       internalID: -8735909576014068713
       vertices: []
       indices: 
@@ -399,7 +447,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54934ff12c844b249848141dc39d29d1
+      spriteID: 5259c644e438040d292646aca4d8b4a6
       internalID: 8607555812283754362
       vertices: []
       indices: 
@@ -420,7 +468,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ece030b3673bb2846a6a1f4c767afc4a
+      spriteID: 79697d1efbb1a4ed8b3fbb022ec6d0f8
       internalID: -423342774825298415
       vertices: []
       indices: 
@@ -441,7 +489,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a514386568a369c4cb209646f9296a88
+      spriteID: 9dc3cc39a14e147d982779190637d975
       internalID: 4344310140767097486
       vertices: []
       indices: 
@@ -462,7 +510,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9317bd273e45ba546ae363c71be5d28d
+      spriteID: f8bc5201723d04237b45f9f1280e4d04
       internalID: -6968872357414378618
       vertices: []
       indices: 
@@ -483,7 +531,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d9867f7361fbbc43891468dfa48c155
+      spriteID: 4f8fe01f1afed47c0a42a9903093a939
       internalID: -2911076765283778322
       vertices: []
       indices: 
@@ -504,7 +552,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b07783ed6b8ef94bb4832f8be72e69c
+      spriteID: b170153e7dc5a42ad82b0857d303fdaa
       internalID: 7123130290930797748
       vertices: []
       indices: 
@@ -525,7 +573,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8de7e21634d72c9498eea86ced4addf9
+      spriteID: 253c81a2073da4bd192056e1d65f36e6
       internalID: -5254977863947696150
       vertices: []
       indices: 
@@ -546,7 +594,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50bd953bdd6c31c49a96f956fd10f3d5
+      spriteID: 6964892c1aa484fc5b0a369085482948
       internalID: 9097382031074673122
       vertices: []
       indices: 
@@ -567,7 +615,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0d25e8993292b4d94997a670ec3b4d
+      spriteID: 0d3ae2b1487d4434da9f22292a782fe4
       internalID: -5861664833880287635
       vertices: []
       indices: 
@@ -588,7 +636,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a8ae591110ce2248abe005aa12ef638
+      spriteID: 988dd17c5ec0d4d3891e79f0c07f3b5c
       internalID: 3414874955346219864
       vertices: []
       indices: 
@@ -609,7 +657,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e58d47b0b78a4e64fafb99fb9198c9a9
+      spriteID: e88a4dbeb72d44cde90cf3e907f86c9c
       internalID: -665584732953572372
       vertices: []
       indices: 
@@ -630,7 +678,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e347d80a276d742a1a2032fd152b16
+      spriteID: 7640c0582d4934e908df93cc7ce6a82f
       internalID: -1668434604089901506
       vertices: []
       indices: 
@@ -651,8 +699,344 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1aba586a050ad4283f5668d80afcad
+      spriteID: 30735fef0ba6242f7a1db120d6a2041f
       internalID: 2111000344739398927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_23
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4990a17d1205d4b299e8df36cefea3b7
+      internalID: 7524368479342599639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_24
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdbd5ad3623c4743a950aaa5ea4818b
+      internalID: 1608596293003672179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_25
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6b43bbeaa174a5baed2d0499e48ed1
+      internalID: -5332225009389881417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_26
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c5f89a62f304b41935869291bc099d
+      internalID: 7355682946322937744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_27
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e4005d529f14158bdfe297cb9dd31a
+      internalID: 574354847366747819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_28
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682d1463436d146149a0f27229f25829
+      internalID: 7662282798761225014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_29
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2be0736b6c6e4246a35ce3b640566f2
+      internalID: -1141811908727838086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_30
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad65a692f9ea4ee2a936125539ed1f6
+      internalID: 1869241643047879890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_31
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1ba2ec64f8a4b5e970ee74b2ba94b5
+      internalID: 8761150820905364729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_32
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611167127ca424700bb6860f304a97ca
+      internalID: -7155678433403957763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_33
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf486c6b70e64d1b8adc9bb1dc5bc69
+      internalID: 4203756039251696442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_34
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568360ca4e1bb40c5b085daa5a61d98e
+      internalID: 2405050218704073223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_35
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2806b5aee34466694172ace64fc755
+      internalID: 8129240816142654449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_36
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda5d730a674445139d7dfdc725ece5a
+      internalID: 2484853146317348354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_37
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f2f5e2022cd452182db01b0dfd36a4
+      internalID: 5402447048977481356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logan_38
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdd3391e81264c9f90a4e8035dd191a
+      internalID: -4608437814544856686
       vertices: []
       indices: 
       edges: []
