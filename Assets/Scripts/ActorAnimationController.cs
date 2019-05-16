@@ -1,31 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using Yarn.Unity;
 
-public class LoganController : MonoBehaviour {
 
+// WARNING: THIS CLASS IS PRETTY MISNAMED. IT REALLY ONLY CONTROLS THE
+// ANIMATION FOR LOGAN. PLAN IS TO REFACTOR IT MAYBE
+public class ActorAnimationController : MonoBehaviour {
 
-    // drawing
-    public bool facingRight;
     Animator anim;
-    SpriteRenderer spr;
-
-    // physics
-    Rigidbody2D rb2d;
-
-   public DialogueRunner dialogue;
 
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
-        spr = GetComponent<SpriteRenderer>();
-        rb2d = GetComponent<Rigidbody2D>();
 	}
 
     // Update is called once per frame

@@ -29,7 +29,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     // hacky. probaby want to do this differently later
     public PlayerController player;
-    public LoganController logan;
+    public ActorAnimationController logan;
 
     bool lineFullyShown = false;
     bool newSegment = false;
