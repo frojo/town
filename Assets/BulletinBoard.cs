@@ -12,15 +12,23 @@ public class BulletinBoard : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    // void EarlyUpdate()
+    // {
+    //     // VERY HACKY. FIX THIS ONCE DONE DEMOING TO FINN
+    //     if (Input.GetButtonDown("interact")) {
+    //             if (gameObject.activeSelf) {
+    //                 Debug.Log("toggle toggle");
+    //                 ToggleActive();
+    //             }
+	// 	}
         
-    }
+    // }
 
     public void ToggleActive() {
 
         // this is hacky and fragile, i know
-        player.inputEnabled = !player.inputEnabled;
+        // player.inputEnabled = !player.inputEnabled;
+        player.bulletinboard = !player.bulletinboard;
         gameObject.SetActive(!gameObject.activeSelf);
     }
 }

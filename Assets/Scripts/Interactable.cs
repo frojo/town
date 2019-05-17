@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour {
 	}
 	
 	void OnTriggerStay2D(Collider2D o) {
-		if (o.CompareTag("Player")) {
+		if (o.CompareTag("Player") && o.GetComponent<PlayerController>().inputEnabled) {
 			if (Input.GetButtonDown("interact")) {
                 triggeredEvent.Invoke();
 			}

@@ -218,6 +218,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         main.SetActive(true);
         options.gameObject.SetActive(false);
         player.inputEnabled = false;
+
         yield return null;
     }
 

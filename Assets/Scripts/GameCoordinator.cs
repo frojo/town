@@ -8,6 +8,7 @@ public class GameCoordinator : MonoBehaviour {
     public DialogueRunner dialogue;
     public PlayerController player;
 
+    public Transform playerStart;
     bool startedFirstCutscene = false;
 
     public bool debug = false;
@@ -16,6 +17,7 @@ public class GameCoordinator : MonoBehaviour {
 	void Start () {
         if (!debug)
         {
+            player.transform.position = playerStart.position;
             player.inputEnabled = false;
             player.AnimatePassedOut();
             player.facingRight = false;

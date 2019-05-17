@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour {
 
    public DialogueRunner dialogue;
 
+   public bool bulletinboard = false;
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -37,12 +39,13 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         Vector2 v = Vector2.zero;
-        if (inputEnabled)
+        if (inputEnabled && !bulletinboard)
         {
             // "raw" means only 1, 0, or -1. no ramping
             v.x = Input.GetAxisRaw("horizontal") * runSpeed;
             v.y = Input.GetAxisRaw("vertical") * runSpeed;
 
+            // hacky?
             if (phoneUnlocked && Input.GetButtonDown("back")) {
                 phone.gameObject.SetActive(!phone.gameObject.activeSelf);
             }
