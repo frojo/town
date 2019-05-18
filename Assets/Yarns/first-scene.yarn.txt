@@ -1,9 +1,9 @@
-title: coach
+title: start
 tags: 
 colorID: 0
-position: -796,-258
+position: -1189,-460
 ---
-Coach: Wake up, Mr. Player. 
+Coach: Wake up, Mr. Higbee. 
 <<protag_passed_out_eyes_open>>
 Coach: You have a rough night? Life's gonna be hard on you if this is what you look like on a Wednesday.
 <<hideui>>
@@ -20,7 +20,7 @@ Player: If only I could remember...
 title: tennis-players
 tags: 
 colorID: 0
-position: -559,-386
+position: -962,-461
 ---
 Tennis1: Waking up on the courts again? Classic.
 Tennis2: Hit rock bottom yet?
@@ -35,7 +35,7 @@ Tennis1: I have Advil... and oxycotton...
 title: logan
 tags: 
 colorID: 0
-position: -286,-324
+position: -328,-472
 ---
 Logan: Hey man. You're a little later than usual.
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.
@@ -65,17 +65,52 @@ Logan: Yup. Some writer or something
 Player: Cheever.
 Logan: God bless you.
 Player: No. You mean John Cheever.
+<<if $DiedOnce == 1>>
+    [[CanWin]]
+<<else>>
+    <<set $DiedOnce to 1>>
+    [[FirstTime]]
+<<endif>>
+
+
+
+
+===
+title: CanWin
+tags: 
+colorID: 6
+position: -561,-201
+---
 Logan: Sure, man. You're the genius. Still on for the party tonight? You should probably go home and change first. Or you know, go to class smelling like Lou Reed...
 -> Go home
-    Player: Yeah, I'm gonna go home. I'd be useless in class anyway.
-    Logan: Wait, really?
-    Player: Yeah?
-    Logan: That's... it's just that you usually go to class...
+    Player: Yeah, I'm gonna go home. I'd be useless in class anyway.    
+    <<if $PickedFirstTime == "home">>
+        Logan: Wait, really?
+        Player: Yeah?
+        Logan: That's... it's just that you usually go to class...
+        [[Die]]
+    <<endif>>
 -> Go to class
-    Player: I might as well go to class.
-    Logan: Wait, really?
-    Player: Yeah?
-    Logan: That's... it's just that you usually go home..
+    Player: I might as well go to class.    
+    <<if $PickedFirstTime == "class">>
+        Logan: Wait, really?
+        Player: Yeah?
+        Logan: That's... it's just that you usually go to home...
+        [[Die]]
+    <<endif>>
+Logan: Hm...
+Logan: Okay.
+Player: Why are you being weird?
+<<hideui>>
+<<logan_put_out_cig>>
+Logan: I just have a lot on my mind. I'll see you later.
+<<win>>
+===
+title: Die
+tags: 
+colorID: 0
+position: -306,148
+---
 Player: What do you mean "usually"? I don't usually wake up on the tennis courts.
 <<hideui>>
 <<logan_put_out_cig>>
@@ -86,9 +121,27 @@ Player: Logan. What are you talking about?
 <<hideui>>
 <<logan_pull_out_gun>>
 Logan: I guess we can try turning it off and on again.
-Player: WOAH. What the fuck dude. Where did you get a gun.
+Player: WOAH. What the fuck dude! Where did you get a gun?? What are you doing??
 Logan: Let's try this again.
 <<loop>>
-
-
+===
+title: FirstTime
+tags: 
+colorID: 0
+position: -79,-201
+---
+Logan: Sure, man. You're the genius. Still on for the party tonight? You should probably go home and change first. Or you know, go to class smelling like Lou Reed...
+-> Go home
+    <<set $PickedFirstTime to "home">>
+    Player: Yeah, I'm gonna go home. I'd be useless in class anyway.
+    Logan: Wait, really?
+    Player: Yeah?
+    Logan: That's... it's just that you usually go to class...
+-> Go to class
+    <<set $PickedFirstTime to "class">>
+    Player: I might as well go to class.
+    Logan: Wait, really?
+    Player: Yeah?
+    Logan: That's... it's just that you usually go home...
+[[Die]]
 ===

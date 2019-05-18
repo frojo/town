@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour {
 
     public void AnimatePassedOut()
     {
-        Debug.Log("player passing out");
         anim.SetTrigger("passed_out_eyes_closed");
     }
 

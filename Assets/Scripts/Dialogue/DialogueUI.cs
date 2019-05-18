@@ -212,6 +212,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
         else if (command.text == "loop")
         {
+            // hacky. should find better place
+            logan.AnimateSmoking();
             yield return gameCoordinator.ShootAndRestart();
         }
     }

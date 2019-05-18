@@ -24,7 +24,6 @@ public class ActorAnimationController : MonoBehaviour {
     {
         anim.SetTrigger("put_out_cig");
 
-        // wait for animator to get to the vom state
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName("logan-put-out-cig"))
         {
             yield return null;
@@ -39,7 +38,6 @@ public class ActorAnimationController : MonoBehaviour {
     {
         anim.SetTrigger("pull_out_gun");
 
-        // wait for animator to get to the vom state
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName("logan-pull-out-gun"))
         {
             yield return null;
@@ -48,6 +46,11 @@ public class ActorAnimationController : MonoBehaviour {
         // wait for vom animation to end
         float waitTime = anim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(waitTime);
+    }
+
+    public void AnimateSmoking()
+    {
+        anim.SetTrigger("smoke");
     }
 }
 

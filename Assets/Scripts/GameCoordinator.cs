@@ -13,7 +13,7 @@ public class GameCoordinator : MonoBehaviour {
     public Transform camStart;
 
     public Animator shootAnim;
-    bool startedFirstCutscene = false;
+    public bool startedFirstCutscene = false;
 
     public bool debug = false;
 
@@ -21,12 +21,15 @@ public class GameCoordinator : MonoBehaviour {
 	void Start () {
         if (!debug)
         {
+
             RestartGame();
         }
-        if (debug) player.inputEnabled = true;
-        // start first cutscene
-        // player is lying on the ground
-        // coach is standing over him
+        if (debug)
+        {
+            startedFirstCutscene = true;
+            player.inputEnabled = true;
+        }
+
         
 	}
 	
@@ -35,18 +38,11 @@ public class GameCoordinator : MonoBehaviour {
         // first scene
         // coach watches as player is dead on the ground
 
-        if (!startedFirstCutscene && Input.GetButtonDown("interact") && !debug) {
+        if (!startedFirstCutscene && Input.GetButtonDown("interact")) {
             startedFirstCutscene = true;
             Debug.Log("starting the first convo, fool");
-            dialogue.StartDialogue("coach");
+            dialogue.StartDialogue("start");
         }
-
-        // debug
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(ShootAndRestart());
-        }
-
     }
 
     void RestartGame()
