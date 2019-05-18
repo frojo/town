@@ -7,8 +7,12 @@ public class GameCoordinator : MonoBehaviour {
 
     public DialogueRunner dialogue;
     public PlayerController player;
+    public Camera cam;
 
     public Transform playerStart;
+    public Transform camStart;
+
+    public Animator shootAnim;
     bool startedFirstCutscene = false;
 
     public bool debug = false;
@@ -17,10 +21,7 @@ public class GameCoordinator : MonoBehaviour {
 	void Start () {
         if (!debug)
         {
-            player.transform.position = playerStart.position;
-            player.inputEnabled = false;
-            player.AnimatePassedOut();
-            player.facingRight = false;
+            RestartGame();
         }
         if (debug) player.inputEnabled = true;
         // start first cutscene
@@ -40,7 +41,39 @@ public class GameCoordinator : MonoBehaviour {
             dialogue.StartDialogue("coach");
         }
 
+        // debug
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(ShootAndRestart());
+        }
+
     }
+
+    void RestartGame()
+    {
+        player.transform.position = playerStart.position;
+        player.inputEnabled = false;
+        player.AnimatePassedOut();
+        player.facingRight = false;
+        startedFirstCutscene = false;
+    }
+
+    public IEnumerator ShootAndRestart()
+    {
+        // play shooting animation
+        shootAnim.gameObject.SetActive(true);
+        shootAnim.SetTrigger("shoot");
+
+        // wait while the animation finishes (hacky)
+        yield return new WaitForSeconds(4);
+
+        
+        shootAnim.gameObject.SetActive(false);
+        cam.transform.position = camStart.position;
+
+        RestartGame();
+    }
+
 
 
 }

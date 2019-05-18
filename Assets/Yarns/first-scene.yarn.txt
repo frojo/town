@@ -80,6 +80,7 @@ Logan: This isn't how it's supposed to happen.
 Player: What are you talking about, man.
 Logan: Something's not right.
 Player: Logan. What are you talking about?
+<<hideui>>
 <<logan_pull_out_gun>>
 Logan: I guess we can try turning it off and on again.
 Player: Woah, what the fuck dude.
