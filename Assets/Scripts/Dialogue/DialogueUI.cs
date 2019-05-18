@@ -210,6 +210,10 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         {
             yield return logan.AnimatePullOutGun();
         }
+        else if (command.text == "loop")
+        {
+            yield return gameCoordinator.ShootAndRestart();
+        }
     }
 
     public override IEnumerator DialogueStarted()

@@ -35,7 +35,7 @@ Tennis1: I have Advil... and oxycotton...
 title: logan
 tags: 
 colorID: 0
-position: -286,-325
+position: -286,-324
 ---
 Logan: Hey man. You're a little later than usual.
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.
@@ -68,11 +68,14 @@ Player: No. You mean John Cheever.
 Logan: Sure, man. You're the genius. Still on for the party tonight? You should probably go home and change first. Or you know, go to class smelling like Lou Reed...
 -> Go home
     Player: Yeah, I'm gonna go home. I'd be useless in class anyway.
+    Logan: Wait, really?
+    Player: Yeah?
+    Logan: That's... it's just that you usually go to class...
 -> Go to class
     Player: I might as well go to class.
-Logan: Wait, really?
-Player: Yeah?
-Logan: That's... it's just that you usually |GO HOME|...
+    Logan: Wait, really?
+    Player: Yeah?
+    Logan: That's... it's just that you usually go home..
 Player: What do you mean "usually"? I don't usually wake up on the tennis courts.
 <<hideui>>
 <<logan_put_out_cig>>
@@ -83,8 +86,9 @@ Player: Logan. What are you talking about?
 <<hideui>>
 <<logan_pull_out_gun>>
 Logan: I guess we can try turning it off and on again.
-Player: Woah, what the fuck dude.
+Player: WOAH. What the fuck dude. Where did you get a gun.
 Logan: Let's try this again.
+<<loop>>
 
 
 ===

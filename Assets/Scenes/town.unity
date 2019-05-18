@@ -5276,7 +5276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7f60170a65441778771c481425e954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameCoordinator: {fileID: 0}
+  gameCoordinator: {fileID: 922469279}
   dialogueUIFrame: {fileID: 1021171793}
   main: {fileID: 723141318}
   options: {fileID: 462321516}
@@ -6357,5 +6357,15 @@ PrefabInstance:
       propertyPath: triggeredEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1752913207}
+    - target: {fileID: 8224888544649989213, guid: 2d2fb435aed83244a99663d60166d50f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.85079575
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224888544649989213, guid: 2d2fb435aed83244a99663d60166d50f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.695549
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2fb435aed83244a99663d60166d50f, type: 3}
