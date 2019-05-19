@@ -214,7 +214,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         {
             // hacky. should find better place
             logan.AnimateSmoking();
-            yield return gameCoordinator.ShootAndRestart();
+            yield return gameCoordinator.ShootAndLoop();
         }
     }
 

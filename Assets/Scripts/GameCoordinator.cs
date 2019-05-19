@@ -12,62 +12,71 @@ public class GameCoordinator : MonoBehaviour {
     public Transform playerStart;
     public Transform camStart;
 
+    public MenuController menu;
+
     public Animator shootAnim;
+    bool inMenu = true;
     public bool startedFirstCutscene = false;
+
 
     public bool debug = false;
 
+
 	// Use this for initialization
 	void Start () {
-        if (!debug)
-        {
-
-            RestartGame();
-        }
         if (debug)
         {
             startedFirstCutscene = true;
             player.inputEnabled = true;
+        } else {
+            inMenu = true;
+            menu.GoToTitle();
         }
-
-        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        // first scene
-        // coach watches as player is dead on the ground
 
-        if (!startedFirstCutscene && Input.GetButtonDown("interact")) {
+        // honestly don't think there's a less hacky way of starting the game
+        if (!inMenu && !startedFirstCutscene && Input.GetButtonDown("interact")) {
             startedFirstCutscene = true;
-            Debug.Log("starting the first convo, fool");
             dialogue.StartDialogue("start");
         }
     }
 
-    void RestartGame()
+    public void RestartLoop()
     {
         player.transform.position = playerStart.position;
+        cam.transform.position = camStart.position;
         player.inputEnabled = false;
         player.AnimatePassedOut();
         player.facingRight = false;
         startedFirstCutscene = false;
+
+        Debug.Log("restarting loop");
+
+        StartCoroutine(WaitAFrameThenMarkInMenuFalse());
     }
 
-    public IEnumerator ShootAndRestart()
+    public IEnumerator WaitAFrameThenMarkInMenuFalse()
+    {
+        // this was entirely added because i don't want initial convo
+        // to happen until player presses x
+        yield return new WaitForEndOfFrame();
+        inMenu = false;
+    }
+
+    public IEnumerator ShootAndLoop()
     {
         // play shooting animation
         shootAnim.gameObject.SetActive(true);
-        shootAnim.SetTrigger("shoot");
 
         // wait while the animation finishes (hacky)
         yield return new WaitForSeconds(4);
-
         
         shootAnim.gameObject.SetActive(false);
-        cam.transform.position = camStart.position;
 
-        RestartGame();
+        RestartLoop();
     }
 
 

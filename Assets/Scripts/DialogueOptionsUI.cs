@@ -36,7 +36,7 @@ public class DialogueOptionsUI : MonoBehaviour {
 
     public void PlaceCursor(uint optionNum)
     {
-        if (optionNum > options.Length)
+        if (optionNum >= options.Length)
         {
             Debug.LogWarning("error: options index out of range");
         }
