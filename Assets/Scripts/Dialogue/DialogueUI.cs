@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
@@ -37,10 +38,13 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     int numCharsShownSoFar = 0;
     string currentFullLine;
 
+    DialogueRunner runner;
+
     void Start() {
         foreach (Character character in characters) {
             charDict.Add(character.name, character);
         }
+        runner = GetComponent<DialogueRunner>();
     }
 
 	public override IEnumerator RunLine(Yarn.Line line) {
@@ -116,7 +120,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
         // display all needed options        
         for (int i = 0; i < options.Count(); i++)
-        {
+         {
             DialogueOption option = options.GetOption(i);
             if (i < numOptions)
             {
@@ -212,9 +216,13 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
         else if (command.text == "loop")
         {
-            // hacky. should find better place
-            logan.AnimateSmoking();
             yield return gameCoordinator.ShootAndLoop();
+        }
+        else if (command.text == "win")
+        {
+            dialogueUIFrame.SetActive(false);
+            runner.Stop();
+            yield return gameCoordinator.Win();
         }
     }
 

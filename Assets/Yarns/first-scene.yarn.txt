@@ -38,6 +38,7 @@ colorID: 0
 position: -328,-472
 ---
 Logan: Hey man. You're a little later than usual.
+<<win>>
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.
 Logan: Want one?
 -> Sure

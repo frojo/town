@@ -6,7 +6,9 @@ using Yarn.Unity;
 public class GameCoordinator : MonoBehaviour {
 
     public DialogueRunner dialogue;
+
     public PlayerController player;
+    public ActorAnimationController logan;
     public Camera cam;
 
     public Transform playerStart;
@@ -15,8 +17,11 @@ public class GameCoordinator : MonoBehaviour {
     public MenuController menu;
 
     public Animator shootAnim;
+    public Animator endAnim;
+
     bool inMenu = true;
     public bool startedFirstCutscene = false;
+    public bool inEndCredits = false;
 
 
     public bool debug = false;
@@ -42,6 +47,13 @@ public class GameCoordinator : MonoBehaviour {
             startedFirstCutscene = true;
             dialogue.StartDialogue("start");
         }
+        else if (inEndCredits) {
+            if (Input.GetButtonDown("interact")) {
+                endAnim.gameObject.SetActive(false);
+                inEndCredits = false;
+                menu.GoToTitle();
+            }
+        }
     }
 
     public void RestartLoop()
@@ -53,7 +65,8 @@ public class GameCoordinator : MonoBehaviour {
         player.facingRight = false;
         startedFirstCutscene = false;
 
-        Debug.Log("restarting loop");
+        // hacky. should find better way of dealing with this
+        logan.AnimateSmoking();
 
         StartCoroutine(WaitAFrameThenMarkInMenuFalse());
     }
@@ -70,6 +83,7 @@ public class GameCoordinator : MonoBehaviour {
     {
         // play shooting animation
         shootAnim.gameObject.SetActive(true);
+        shootAnim.SetTrigger("shoot");
 
         // wait while the animation finishes (hacky)
         yield return new WaitForSeconds(4);
@@ -77,6 +91,21 @@ public class GameCoordinator : MonoBehaviour {
         shootAnim.gameObject.SetActive(false);
 
         RestartLoop();
+    }
+
+    public IEnumerator Win()
+    {
+        // play shooting animation
+        endAnim.gameObject.SetActive(true);
+        endAnim.SetTrigger("end");
+        Debug.Log("win!");
+
+        // wait while the animation finishes (hacky)
+        yield return new WaitForSeconds(4);
+
+        player.inputEnabled = false;
+        // let player exit back to the title screen
+        inEndCredits = true;
     }
 
 
