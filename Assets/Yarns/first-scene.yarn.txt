@@ -1,41 +1,52 @@
 title: start
 tags: 
 colorID: 0
-position: -1189,-460
+position: -1463,-480
 ---
-Coach: Wake up, Mr. Higbee. 
-<<protag_passed_out_eyes_open>>
-Coach: You have a rough night? Life's gonna be hard on you if this is what you look like on a Wednesday.
-<<hideui>>
-<<wait 1>>
-<<protag_still>>
-<<wait 1>>
-<<protag_vom>>
-Player: I feel a million times better. Thanks Coach P. I'll keep that in mind.
-Coach: Please get out of here. We are about to play a tournament.
-Player: No problem. Now which way is the exit again...? I never liked tennis courts bcause there's only one or two ways out. And if someone chains the gate... then what?
-Coach: Same way as you took in, son.
-Player: If only I could remember...
+<<if $CoachTalked == 1>>
+    Coach: Please. The tournament is starting soon.
+<<else>>
+    <<set $CoachTalked to 1>>
+    Coach: Wake up, Mr. Higbee. 
+    <<protag_passed_out_eyes_open>>
+    Coach: You have a rough night? Life's gonna be hard on you if this is what you look like on a Wednesday.
+    <<hideui>>
+    <<wait 1>>
+    <<protag_still>>
+    <<wait 1>>
+    <<protag_vom>>
+    Player: I feel a million times better. Thanks Coach P. I'll keep that in mind.
+    Coach: Please get out of here. We are about to play a tournament.
+    Player: No problem. Now which way is the exit again...? I never liked tennis courts bcause there's only one or two ways out. And if someone chains the gate... then what?
+    Coach: Same way as you took in, son.
+    Player: If only I could remember...
+<<endif>>
 ===
 title: tennis-players
 tags: 
 colorID: 0
-position: -962,-461
+position: -1146,-445
 ---
-Tennis1: Waking up on the courts again? Classic.
-Tennis2: Hit rock bottom yet?
-Player: Not yet. Not even close... Listen, what period is it?
-Tennis2: You can probably still catch third period if you run.
-Tennis1: I have Advil... and oxycotton...
--> Advil
-    Player: I'll take some Advil.
--> Oxycotton
-    Player: I'll take an oxy.
+<<if $TennisTalked == 1>>
+    Tennis1: We really need to warm up.
+    Tennis2: We'll catch you later.
+<<else>>
+    <<set $TennisTalked to 1>>
+    Tennis1: Waking up on the courts again? Classic.
+    Tennis2: Hit rock bottom yet?
+    Player: Not yet. Not even close... Listen, what period is it?
+    Tennis2: You can probably still catch third period if you run.
+    Tennis1: I have Advil... and oxycotton...
+    -> Advil
+        Player: I'll take some Advil.
+    -> Oxycotton
+        Player: I'll take an oxy.
+<<endif>>
 ===
 title: logan
 tags: 
 colorID: 0
-position: -328,-472
+position: -330,-474
 ---
 Logan: Hey man. You're a little later than usual.
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.

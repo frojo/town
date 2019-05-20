@@ -45,6 +45,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
             charDict.Add(character.name, character);
         }
         runner = GetComponent<DialogueRunner>();
+        displayedText.text = "";
     }
 
 	public override IEnumerator RunLine(Yarn.Line line) {

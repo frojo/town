@@ -6,6 +6,7 @@ using Yarn.Unity;
 public class GameCoordinator : MonoBehaviour {
 
     public DialogueRunner dialogue;
+    public DialogueVariableStorage dialogueVars;
 
     public PlayerController player;
     public ActorAnimationController logan;
@@ -29,6 +30,7 @@ public class GameCoordinator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         if (debug)
         {
             startedFirstCutscene = true;
@@ -64,6 +66,7 @@ public class GameCoordinator : MonoBehaviour {
         player.AnimatePassedOut();
         player.facingRight = false;
         startedFirstCutscene = false;
+        dialogueVars.ResetToDefaults();
 
         // hacky. should find better way of dealing with this
         logan.AnimateSmoking();
