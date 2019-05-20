@@ -247,7 +247,13 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     public override IEnumerator DialogueComplete() {
         dialogueUIFrame.SetActive(false);
-        player.inputEnabled = true;
+
+        // suuuuuuuper gross
+        if (gameCoordinator.startedFirstCutscene)
+        {
+            player.inputEnabled = true;
+        }
+        
 
         yield return null;
 	}
