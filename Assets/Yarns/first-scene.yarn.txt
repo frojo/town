@@ -121,7 +121,7 @@ Logan: Hey, one sec before you go. Have you ever heard of Simulation Theory?
     Player: Yeah, it's like we're all in the Matrix.
     Logan: Yeah, something like that. You ever think about it?
     Player: I mean... why does it matter? Even if it is, we'd never know, right?
-    Logan. Yeah. Yeah, that's right. Sure.
+    Logan: Yeah. Yeah, that's right. Sure.
 -> No
     Player: What Theory?
     Logan: It's like... what if everything, the entire universe, is really just a computer simulation.
