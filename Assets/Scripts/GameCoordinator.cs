@@ -69,12 +69,15 @@ public class GameCoordinator : MonoBehaviour {
         player.facingRight = false;
         startedFirstCutscene = false;
         courtDoor.Close();
-        
+
+        // reset dialogue vars except for ones that we want to conserve
+        // between loops
+        Yarn.Value diedOnce = dialogueVars.GetValue("$DiedOnce");
+        Yarn.Value pickedFirstTime = dialogueVars.GetValue("$PickedFirstTime");
         dialogueVars.ResetToDefaults();
-        if (diedOnce)
-        {
-            dialogueVars.SetValue("DiedOnce", new Yarn.Value(1));
-        }
+        dialogueVars.SetValue("$DiedOnce", diedOnce);
+        dialogueVars.SetValue("$PickedFirstTime", pickedFirstTime);
+        
 
         // hacky. should find better way of dealing with this
         logan.AnimateSmoking();
