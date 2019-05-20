@@ -3125,7 +3125,7 @@ MonoBehaviour:
   endAnim: {fileID: 1576960532}
   startedFirstCutscene: 0
   inEndCredits: 0
-  debug: 1
+  debug: 0
 --- !u!4 &922469280
 Transform:
   m_ObjectHideFlags: 0
