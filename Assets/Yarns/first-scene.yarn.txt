@@ -38,15 +38,15 @@ colorID: 0
 position: -328,-472
 ---
 Logan: Hey man. You're a little later than usual.
-<<win>>
 Player: Yeah, just a little. I love the smell of American Spirits in the morning.
 Logan: Want one?
 -> Sure
     Player: Sure. I never know how you can afford the expensive kind.
+    <<protag_smoke>>
     Logan: Hard work. Bribery. Thievery. Pick one.
-    -> Hard work
-    -> Bribery
     -> Thievery
+    -> Bribery
+    -> Hard work
     Logan: Don't actually pick-- it's rhetorical dude.
     Player: right lol
 -> Nah
@@ -104,7 +104,24 @@ Logan: Okay.
 Player: Why are you being weird?
 <<hideui>>
 <<logan_put_out_cig>>
-Logan: I just have a lot on my mind. I'll see you later.
+Logan: I just have a lot on my mind.
+Logan: Hey, one sec before you go. Have you ever heard of Simulation Theory?
+-> Yes
+    Player: Yeah, it's like we're all in the Matrix.
+    Logan: Yeah, something like that. You ever think about it?
+    Player: I mean... why does it matter? Even if it is, we'd never know, right?
+    Logan. Yeah. Yeah, that's right. Sure.
+-> No
+    Player: What Theory?
+    Logan: It's like... what if everything, the entire universe, is really just a computer simulation.
+    Player: Like the Matrix?  
+    Logan: Yeah, basically.
+    Player: Who's running the simulation? Other people?
+    Logan: Or aliens. Or I don't know... superdimensional beings that we can't comprehend.
+    Player: Super what?
+    Logan: Like...
+    Logan: Nevermind.
+Logan: It's just something I've been thinking about. Sorry about being weird. I gotta go back to class, I'll see you tonight, man.
 <<win>>
 ===
 title: Die
@@ -122,6 +139,7 @@ Player: Logan. What are you talking about?
 <<hideui>>
 <<logan_pull_out_gun>>
 Logan: I guess we can try turning it off and on again.
+<<protag_still>>
 Player: WOAH. What the fuck dude! Where did you get a gun?? What are you doing??
 Logan: Let's try this again.
 <<loop>>

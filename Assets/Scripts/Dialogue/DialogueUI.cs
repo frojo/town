@@ -202,6 +202,12 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
             player.AnimateStill();
             yield return null;
         }
+        else if (command.text == "protag_smoke")
+        {
+            Debug.Log("dialogue says to smoke");
+            player.AnimateSmoking();
+            yield return null;
+        }
         else if (command.text == "protag_vom")
         {
             yield return player.AnimateVom();
@@ -216,6 +222,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
         }
         else if (command.text == "loop")
         {
+            dialogueUIFrame.SetActive(false);
+            runner.Stop();
             yield return gameCoordinator.ShootAndLoop();
         }
         else if (command.text == "win")

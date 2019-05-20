@@ -98,7 +98,6 @@ public class GameCoordinator : MonoBehaviour {
         // play shooting animation
         endAnim.gameObject.SetActive(true);
         endAnim.SetTrigger("end");
-        Debug.Log("win!");
 
         // wait while the animation finishes (hacky)
         yield return new WaitForSeconds(4);

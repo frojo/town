@@ -86,6 +86,12 @@ public class PlayerController : MonoBehaviour {
         anim.SetTrigger("still");
     }
 
+    public void AnimateSmoking()
+    {
+        Debug.Log("setting animation trigger smoke for player");
+        anim.SetTrigger("smoke");
+    }
+
     public IEnumerator AnimateVom()
     {
         anim.SetTrigger("vom");
