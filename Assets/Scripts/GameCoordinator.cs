@@ -10,6 +10,7 @@ public class GameCoordinator : MonoBehaviour {
 
     public PlayerController player;
     public ActorAnimationController logan;
+    public Door courtDoor;
     public Camera cam;
 
     public Transform playerStart;
@@ -21,6 +22,7 @@ public class GameCoordinator : MonoBehaviour {
     public Animator endAnim;
 
     bool inMenu = true;
+    bool diedOnce = false;
     public bool startedFirstCutscene = false;
     public bool inEndCredits = false;
 
@@ -66,7 +68,13 @@ public class GameCoordinator : MonoBehaviour {
         player.AnimatePassedOut();
         player.facingRight = false;
         startedFirstCutscene = false;
+        courtDoor.Close();
+        
         dialogueVars.ResetToDefaults();
+        if (diedOnce)
+        {
+            dialogueVars.SetValue("DiedOnce", new Yarn.Value(1));
+        }
 
         // hacky. should find better way of dealing with this
         logan.AnimateSmoking();
@@ -84,6 +92,7 @@ public class GameCoordinator : MonoBehaviour {
 
     public IEnumerator ShootAndLoop()
     {
+        diedOnce = true;
         // play shooting animation
         shootAnim.gameObject.SetActive(true);
         shootAnim.SetTrigger("shoot");
