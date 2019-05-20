@@ -238,6 +238,8 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
     public override IEnumerator DialogueStarted()
     {
         dialogueUIFrame.SetActive(true);
+        // hide interactable
+
         main.SetActive(true);
         options.gameObject.SetActive(false);
         player.inputEnabled = false;
@@ -247,6 +249,7 @@ public class DialogueUI : Yarn.Unity.DialogueUIBehaviour {
 
     public override IEnumerator DialogueComplete() {
         dialogueUIFrame.SetActive(false);
+        // show interactable
 
         // suuuuuuuper gross
         if (gameCoordinator.startedFirstCutscene)

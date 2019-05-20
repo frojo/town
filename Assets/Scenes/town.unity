@@ -2436,12 +2436,12 @@ PrefabInstance:
     - target: {fileID: 8224888544649989213, guid: 2d2fb435aed83244a99663d60166d50f,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.8858533
+      value: 0.25806737
       objectReference: {fileID: 0}
     - target: {fileID: 8224888544649989213, guid: 2d2fb435aed83244a99663d60166d50f,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.3337464
+      value: 0.9877229
       objectReference: {fileID: 0}
     - target: {fileID: 8229310652434951010, guid: 2d2fb435aed83244a99663d60166d50f,
         type: 3}
@@ -2456,7 +2456,7 @@ PrefabInstance:
     - target: {fileID: 8131103477638730300, guid: 2d2fb435aed83244a99663d60166d50f,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2fb435aed83244a99663d60166d50f, type: 3}
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   endAnim: {fileID: 1576960532}
   startedFirstCutscene: 0
   inEndCredits: 0
-  debug: 1
+  debug: 0
 --- !u!4 &922469280
 Transform:
   m_ObjectHideFlags: 0
