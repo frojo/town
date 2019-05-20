@@ -14,10 +14,12 @@ public class DrawWall : MonoBehaviour {
     // hardcode player to be at z = 0 (bg/"floor" at 10 
     BoxCollider2D player;
 
+    float startDepth;
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindWithTag("Player").GetComponent<BoxCollider2D>();
-		
+        startDepth = transform.position.z;
 	}
 	
 	// Update is called once per frame
@@ -25,10 +27,10 @@ public class DrawWall : MonoBehaviour {
         float newDepth;
         if (player.bounds.center.y > 
             GetComponent<BoxCollider2D>().bounds.center.y) {
-            newDepth = -5;
+            newDepth = startDepth - 2;
         } else
         {
-            newDepth = 5;
+            newDepth = startDepth + 2;
         }
         
 
