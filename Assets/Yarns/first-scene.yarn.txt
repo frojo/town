@@ -7,7 +7,7 @@ position: -1463,-480
     Coach: Please. The tournament is starting soon.
 <<else>>
     <<set $CoachTalked to 1>>
-    Coach: Wake up, Mr. Higbee. 
+    Coach: Wake up, Mr. Neddy. 
     <<protag_passed_out_eyes_open>>
     Coach: You have a rough night? Life's gonna be hard on you if this is what you look like on a Wednesday.
     <<hideui>>
